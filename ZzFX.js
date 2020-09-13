@@ -294,7 +294,7 @@ SoundToArray(sound)
 
 } // class _ZZFX
 
-const ZZFX = new _ZZFX;
+// const ZZFX = new _ZZFX;
 function zzfx() { return ZZFX.Play(...arguments) }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -310,7 +310,7 @@ let zzfxR = 44100; // sample rate
 // @language_out ECMASCRIPT_2019
 // ==/ClosureCompiler==
 
-let zzfxV = .3;    // volume
+let zzfxV = .5;    // volume
 let zzfxMicro =    // play sound
 (
     // parameters
@@ -392,6 +392,7 @@ let zzfxMicro =    // play sound
         }
     }
 
+    /*
     // play an array of audio samples
     buffer = zzfxX.createBuffer(1, length, zzfxR);
     buffer.getChannelData(0).set(b);
@@ -400,5 +401,8 @@ let zzfxMicro =    // play sound
     source.connect(zzfxX.destination);
     source.start();
     return source;
+    */
+
+    return b
 }
-let zzfxX = new (window.AudioContext||webkitAudioContext);
+// let zzfxX = new (window.AudioContext||webkitAudioContext);
